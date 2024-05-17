@@ -5,22 +5,22 @@
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 80%;
     font-family: 'DM Sans', sans-serif;
     scroll-behavior: smooth;
 }
 
 /* root */
 :root {
-    --bitcoin-orange: #F7931A;
+    --bitcoin-orange: #874da2;
     --soft-orange: #FFE9D5;
-    --secondary-blue: #1a9af7;
+    --secondary-blue: #066bb3;
     --soft-blue: #e7f5ff;
-    --warm-black: #201E1C;
-    --black: #282623;
+    --warm-black: #2b2d42;
+    --black: #242538;
     --grey: #bababa;
     --off-white: #faf8f7;
-    --just-white: #fff;
+    --just-white: #eeeeee;
 }
 
 /* Header */
@@ -31,14 +31,14 @@ header {
     justify-content: center;
     width: 100%; /* Queremos que el header abarque un 100% de ancho de la pantalla */
     min-width: 320px;  /* Le damos un min width de 320, porque es la resolucíon más chica en dispositivos */
-    height: 334px;
+    height: 374px;
     text-align: center;
-    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+    background-image: linear-gradient(45deg, #874da2 0%, #c43a30 100%);
 }
 
 header img {
-    width: 150px;
-    height: 24px;
+    width: 100px;
+    height: 100px;
     margin-top: 60px;
     align-self: center;
 }
@@ -72,7 +72,7 @@ header img {
 .header__title-container .header__button {
     position: absolute;
     left: calc(50% - 118px);
-    top: 270px; /* cuando estámos en "absolute" podemos usar top,right,left para posicionar el elemento */
+    top: 310px; /* cuando estámos en "absolute" podemos usar top,right,left para posicionar el elemento */
     display: block;
     margin-top: 35px;
     padding: 15px;
@@ -94,6 +94,7 @@ header img {
     height: 8px;
     margin-left: 10px;
     background-image: url('../assets/down_arrow.svg');
+
 }
 
 /* main */
@@ -120,8 +121,8 @@ main {
 }
 
 .main__exchange-container .backgroundImg {
-    width: 200px;
-    height: 200px;
+    width: 120px;
+    height: 120px;
     margin: 0 auto;
     margin-bottom: 50px;
     background-image: url(../assets/bitcoin.svg);
@@ -308,11 +309,11 @@ main {
 
 .product__detail-logo {
     position: absolute;
-    width: 40px;
-    height: 25px;
-    top: -10px;
+    width: 50px;
+    height: 50px;
+    top: -20px;
     left: calc(50% - 20px);
-    background-image: url('../assets/batatbit.svg');
+    background-image: url('../assets/potato-svgrepo-com.svg');
 }
 
 .product__detail-title {
@@ -345,7 +346,7 @@ main {
     width: 90%;
     min-width: 288px;
     max-width: 400px;
-    height: 150px;
+    height: 160px;
     margin: 15px auto;
     padding: 15px;
     background-color: var(--black);
@@ -355,7 +356,7 @@ main {
 
 .product__detail-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0px 10px 20px 2px rgba(238, 190, 18, 0.7);
+    box-shadow: 0px 10px 20px 2px rgba(202, 51, 240, 0.7);
 }
 
 .product__detail-card .icon__card {
@@ -419,10 +420,10 @@ main {
     font-weight: bold;
     line-height: 2.6rem;
     color: var(--just-white);
+    text-align: center;
 }
 
 /* sección de planes */
-
 .main__plans-container {
     width: 100%;
     height: 100%;
@@ -455,71 +456,53 @@ main {
     color: #757575;
 }
 
+.plans__container-slider {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center items */
+    overflow: hidden; /* Hide overflow */
+    height: auto; /* Adjust height to content */
+}
+
 .plans__container-card {
     position: relative;
-    scroll-snap-align: center; /* intenta centrar automaticamente las tarjetas, para que el scroll te lleve al centro del producto */
     width: 60%;
     min-width: 190px;
     max-width: 300px;
     height: 250px;
-    margin: 50px 10px 0; /* se uso 20px para dar un espacio entre tarjetas en el scroll */
+    margin: 20px 10px; /* Adjusted margin */
     padding: 0 15px;
     background-color: var(--just-white);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(89,73,30,0.16);
+    box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .plans__container-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(89,73,30,0.32);
+    box-shadow: 0 4px 8px rgba(89, 73, 30, 0.32);
 }
 
-.recommended {
-    position: absolute; /* le damos absolute, porque el padre (en este caso el plans container card ) tiene posición relativa, esto nos ayuda a dar el efecto flotante */
+.recommended, .recommended1, .recommended2 {
+    position: absolute;
     width: 120px;
     height: 31px;
     top: -15px;
-    left: calc(50% - 60px); /* es para realizar el calculo de donde se posiconara, en este caso en el centro */
+    left: calc(50% - 60px);
     font-size: 1.2rem;
     font-weight: 700;
     padding: 6px;
-    background-color: var(--bitcoin-orange);
     border-radius: 8px;
     color: var(--just-white);
 }
 
-.recommended1 {
-    position: absolute; /* le damos absolute, porque el padre (en este caso el plans container card ) tiene posición relativa, esto nos ayuda a dar el efecto flotante */
-    width: 120px;
-    height: 31px;
-    top: -15px;
-    left: calc(50% - 60px); /* es para realizar el calculo de donde se posiconara, en este caso en el centro */
-    font-size: 1.2rem;
-    font-weight: 700;
-    padding: 6px;
-    background-color: var(--secondary-blue);
-    border-radius: 8px;
-    color: var(--just-white);
-}
-
-.recommended2 {
-    position: absolute; /* le damos absolute, porque el padre (en este caso el plans container card ) tiene posición relativa, esto nos ayuda a dar el efecto flotante */
-    width: 120px;
-    height: 31px;
-    top: -15px;
-    left: calc(50% - 60px); /* es para realizar el calculo de donde se posiconara, en este caso en el centro */
-    font-size: 1.2rem;
-    font-weight: 700;
-    padding: 6px;
-    background-color: var(--grey);
-    border-radius: 8px;
-    color: var(--just-white);
-}
+.recommended { background-color: var(--bitcoin-orange); }
+.recommended1 { background-color: var(--secondary-blue); }
+.recommended2 { background-color: var(--grey); }
 
 .plans__card-title {
     padding-top: 30px;
-    font-style: 1.4rem;
+    font-size: 1.4rem;
     font-weight: 500;
     line-height: 1.8rem;
     color: var(--black);
@@ -537,7 +520,6 @@ main {
     font-size: 1.2rem;
     font-weight: 300;
     vertical-align: 2.4rem;
-
 }
 
 .plans__card-saving {
@@ -567,16 +549,6 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     vertical-align: text-bottom;
-}
-
-/* el scroll vertical con css */
-
-.plans__container-slider {
-    display: flex;
-    height: 316px;
-    overflow-x: scroll;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x proximity;
 }
 
 /* footer */
@@ -612,6 +584,6 @@ footer .left ul {
 }
 
 .right img {
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 90px;
 }
