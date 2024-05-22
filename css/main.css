@@ -352,6 +352,8 @@ main {
     background-color: var(--black);
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+    text-decoration: none;
+    list-style: none;
 }
 
 .product__detail-card:hover {

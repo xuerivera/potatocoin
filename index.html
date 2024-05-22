@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Potato Coin</title>
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 930px" />
+    <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 930px)" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@100;300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@100;300;500&display=swap" rel="stylesheet">
+    <script type="module" src="./script/script.js"></script>
 </head>
 <body>
     <header>
@@ -21,7 +22,7 @@
         </div>
     </header>
     
-    <main>
+    <main id="app">
         <section class="main__exchange-container">
             <div class="backgroundImg"></div>
             <div class="main__exchange-title">
@@ -91,27 +92,27 @@
             <div class="product__detail-title">
                 <h2>We created an unparalleled product.</h2>
                 <p class="product__text-title">Reliable and designed for everyday use.</p>
-                <section class="product__cards-container">
-                    <article class="product__detail-card"><span class="clock icon__card"></span>
-                    <p class="product__card-title">Real-time</p>
-                    <p class="product__card-body">Our API gathers minute-by-minute information on the rates that most determine behavior.</p>
-                </article>
-                    <article class="product__detail-card"><span class="eye icon__card"></span>
-                    <p class="product__card-title">No hidden fees</p>
-                    <p class="product__card-body">Whether buying or at the time of exit, PotatoCoin always shows you the real cost of what you are acquiring.</p>
-                    </article>
-                    <article class="product__detail-card"><span class="dollar icon__card"></span>
-                    <p class="product__card-title">Compare currencies</p>
-                    <p class="product__card-body">Whether buying or at the time of exit, PotatoCoin always shows you the real cost of what you are acquiring.</p>
-                    </article>
-                    <article class="product__detail-card"><span class="check icon__card"></span>
+                <ul class="product__cards-container" id="Cards">
+                    <li class="product__detail-card" id="c1" draggable="true"><span class="clock icon__card"></span>
+                        <p class="product__card-title">Real-time</p>
+                        <p class="product__card-body">Our API gathers minute-by-minute information on the rates that most determine behavior.</p>
+                    </li>
+                    <li class="product__detail-card" id="c2" draggable="true"><span class="eye icon__card"></span>
+                        <p class="product__card-title">No hidden fees</p>
+                        <p class="product__card-body">Whether buying or at the time of exit, PotatoCoin always shows you the real cost of what you are acquiring.</p>
+                    </li>
+                    <li class="product__detail-card" id="c3" draggable="true"><span class="dollar icon__card"></span>
+                        <p class="product__card-title">Compare currencies</p>
+                        <p class="product__card-body">Whether buying or at the time of exit, PotatoCoin always shows you the real cost of what you are acquiring.</p>
+                    </li>
+                    <li class="product__detail-card" id="c4" draggable="true"><span class="check icon__card"></span>
                         <p class="product__card-title">Reliable information</p>
                         <p class="product__card-body">Our sources are 100% verified and we continue to audit their content as they are updated.</p>
-                    </article>
-                </section>
+                    </li>
+                </ul>
             </div>
         </section>
-        <section class="bicoin__img-container"">
+        <section class="bicoin__img-container">
             <h2>Discover it today.</h2>
         </section>
         <section id="plans" class="main__plans-container">
@@ -167,5 +168,3 @@
             <img src="./assets/babatbit.png" alt="Batabit logo">
         </section>
     </footer>
-</body>
-</html>
